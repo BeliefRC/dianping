@@ -1,5 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import HomeHeader from '../../components/HomeHeader/HomeHeader'
+
 
 export default  class Home  extends React.Component {
     // 构造
@@ -13,7 +15,7 @@ export default  class Home  extends React.Component {
     render() {
         return (
             <div>
-                home
+                <HomeHeader/>
             </div>
         )
     }

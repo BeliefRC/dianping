@@ -1,5 +1,6 @@
 import {combineReducers} from 'redux'
 import userInfo from './userInfo'
-export default  combineReducers({
+
+export default combineReducers({
     userInfo
 })

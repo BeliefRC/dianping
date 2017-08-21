@@ -18,16 +18,22 @@ class App extends React.Component {
     }
 
     componentDidMount() {
+        // 从localstorage中获取城市信息
         let cityName = LocalStore.getItem(CITYNAME);
         if (cityName == null) {
             cityName = '北京'
         }
         console.log(cityName);
+        // 将城市信息存储到redux
+        this.props.userInfoActions.update({
+            cityName
+        });
+
         setTimeout(() => {
             this.setState({
                 initDone: true
             })
-        }, 1e3)
+        }, 1    )
     }
 
     render() {

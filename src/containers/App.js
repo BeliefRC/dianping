@@ -21,19 +21,19 @@ class App extends React.Component {
         // 从localstorage中获取城市信息
         let cityName = LocalStore.getItem(CITYNAME);
         if (cityName == null) {
-            cityName = '北京'
+            cityName = '武汉'
         }
-        console.log(cityName);
+
         // 将城市信息存储到redux
         this.props.userInfoActions.update({
-            cityName
+            cityName:cityName
         });
 
         setTimeout(() => {
             this.setState({
                 initDone: true
             })
-        }, 1    )
+        }, 1)
     }
 
     render() {
@@ -58,6 +58,7 @@ function mapDispatchToProps(dispatch) {
         userInfoActions: bindActionCreators(userInfoActionsFromOtherFile, dispatch)
     }
 }
+
 export default connect(
     mapStateToProps,
     mapDispatchToProps,

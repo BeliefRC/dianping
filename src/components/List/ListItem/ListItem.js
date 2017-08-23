@@ -1,5 +1,6 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import {Link} from 'react-router'
 import './style.less'
 
 export default class ListItem extends React.Component {
@@ -17,6 +18,7 @@ export default class ListItem extends React.Component {
         return (
             <div>
                 <div className="list-item clear-fix">
+                    <Link to={'/detail/' + listItemData.id}>
                     <div className="item-img-container float-left">
                         <img src={listItemData.img} alt={listItemData.title}/>
                     </div>
@@ -33,6 +35,7 @@ export default class ListItem extends React.Component {
                             <span className="number float-right">已售{listItemData.mumber}</span>
                         </div>
                     </div>
+                    </Link>
                 </div>
             </div>
         )

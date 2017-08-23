@@ -16,6 +16,7 @@ export default class Ad extends React.Component {
     }
 
     componentDidMount() {
+        // 获取广告数据
         const result = getAdData();
         result.then(res => {
             return res.json()

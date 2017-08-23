@@ -12,7 +12,7 @@ module.exports = {
         },
         {
             img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201645858-1342445625.png',
-            title: '北京开源饭店',
+            title: '武汉开源饭店',
             subTitle: '[望京]自助晚餐',
             price: '98',
             distance: '140m',
@@ -22,7 +22,7 @@ module.exports = {
         {
             img: 'http://images2015.cnblogs.com/blog/138012/201610/138012-20161016201652952-1050532278.png',
             title: '服装定制',
-            subTitle: '原价xx元，现价xx元，可修改一次',
+            subTitle: '原价2980元，现价1980元，可修改一次',
             price: '1980',
             distance: '160',
             mumber: '106',

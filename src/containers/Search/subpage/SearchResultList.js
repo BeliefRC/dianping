@@ -51,7 +51,7 @@ export default class SearchResultList extends React.Component {
         this.handlerResult(listData);
     }
 
-// 处理获取的数据（公共操作）
+    // 处理获取的数据（公共操作）
     handlerResult(result) {
         result.then(res => res.json())
             .then(json => {
@@ -69,7 +69,7 @@ export default class SearchResultList extends React.Component {
         })
     }
 
-// 加载更多函数
+    // 加载更多函数
     loadMoreFun() {
         //正在加载
         this.setState({

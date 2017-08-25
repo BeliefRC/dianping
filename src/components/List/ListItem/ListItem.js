@@ -22,7 +22,7 @@ export default class ListItem extends React.Component {
                     <div className="item-img-container float-left">
                         <img src={listItemData.img} alt={listItemData.title}/>
                     </div>
-                    <div className="item-content">
+                    <div className="item-content ">
                         <div className="item-title-container clear-fix">
                             <h3 className="float-left">{listItemData.title}</h3>
                             <span className="float-right">{listItemData.distance}</span>

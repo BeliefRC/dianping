@@ -43,6 +43,12 @@ export default class LoginComponent extends React.Component {
         })
     }
 
+    codeChange(e) {
+        this.setState({
+            code: e.target.value
+        })
+    }
+
     clickHandle() {
         let userName = this.state.username;
         this.props.loginHandle(userName)
@@ -53,6 +59,7 @@ export default class LoginComponent extends React.Component {
         this.setState({
             time: 60,
             username: '',
+            code: '',
             sending: false,
         })
     }
@@ -79,10 +86,13 @@ export default class LoginComponent extends React.Component {
                             this.state.sending ? `${time}S后重试` : '发送验证码'
                         }
                     </button>
-                    <input type="text" placeholder="输入验证码"/>
-
+                    <input type="text" placeholder="输入验证码" onChange={this.codeChange.bind(this)}/>
                 </div>
-                <button className="btn-login" onClick={this.clickHandle.bind(this)} >登录</button>
+                {this.state.sending ? <p>验证码已发送</p> : ''}
+                <button className={this.state.username && this.state.code ? "btn-login" : 'btn-login disable'}
+                        disabled={!(this.state.username && this.state.code)}
+                        onClick={this.clickHandle.bind(this)}>登录
+                </button>
             </div>
         )
     }

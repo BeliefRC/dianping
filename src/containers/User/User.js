@@ -1,9 +1,12 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
+import { connect } from 'react-redux'
 import {hashHistory} from 'react-router'
 import Header from '../../components/Header/Header'
+import UserInfo from '../../components/UserInfo/UserInfo'
+import OrderList from './subpage/OrderList'
 
-export default class User extends React.Component {
+ class User extends React.Component {
     // 构造
     constructor(props, context) {
         super(props, context);
@@ -19,12 +22,28 @@ export default class User extends React.Component {
         }
     }
 
-
     render() {
+        const userInfo = this.props.userInfo;
         return (
             <div>
                 <Header title='用户中心'/>
+                <UserInfo username={sessionStorage.username} cityName={userInfo.cityName}/>
+                <OrderList username={sessionStorage.username}/>
             </div>
         )
     }
 }
+function mapStateToProps(state) {
+    return {
+        userInfo: state.userInfo
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+    }
+}
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(User)

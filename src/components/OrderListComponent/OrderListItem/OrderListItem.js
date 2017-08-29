@@ -63,14 +63,6 @@ export default class OrderListItem extends React.Component {
         })
     }
 
-    //发送请求操作
-    /*    handlerComment() {
-            let submitComment = this.props.submitComment,
-                id = this.props.orderListData.id,
-                comment = this.state.commentText,
-                star = this.state.stars[id] || '0';
-            submitComment(id, comment, star, this.commentOk.bind(this))
-        }*/
 
     //设置星星的数量
     starClickCallback(star) {

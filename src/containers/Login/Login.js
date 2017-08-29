@@ -37,8 +37,9 @@ class Login extends React.Component {
             })
         }
     }
+
     // 跳转用户中心
-    goUserPage() { 
+    goUserPage() {
         hashHistory.push('/user')
     }
 
@@ -48,7 +49,7 @@ class Login extends React.Component {
             router = this.props.params.router;
         let userInfo = this.props.userInfo;
         // 储存用户名
-        this.props.userInfo.username = username;
+        this.props.userInfo.username = username || sessionStorage.username;
         sessionStorage.username = username;
         //更新用户名
         actions.update(userInfo);

@@ -70,9 +70,9 @@ export default class LoginComponent extends React.Component {
                         value={this.state.username}
                     />
                 </div>
-                <div className="input-container password-container">
-                    <i className="icon-key"/>
-                    <button className={this.state.sending ? 'sending' : ''}
+                <div className="input-container password-container clear-fix">
+                    <i className="icon-key float-left"/>
+                    <button className={this.state.sending ? 'sending float-right' : 'float-right'}
                             disabled={this.state.sending}
                             onClick={this.sendCode.bind(this)}>
                         {
@@ -80,8 +80,9 @@ export default class LoginComponent extends React.Component {
                         }
                     </button>
                     <input type="text" placeholder="输入验证码"/>
+
                 </div>
-                <button className="btn-login" onClick={this.clickHandle.bind(this)}>登录</button>
+                <button className="btn-login" onClick={this.clickHandle.bind(this)} >登录</button>
             </div>
         )
     }

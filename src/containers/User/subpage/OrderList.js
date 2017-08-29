@@ -1,7 +1,7 @@
 import React from 'react'
 import PureRenderMixin from 'react-addons-pure-render-mixin'
 import OrderListComponent from '../../../components/OrderListComponent/OrderListComponent'
-import {getOrderListData} from '../../../fetch/user/orderList'
+import {getOrderListData, postComment} from '../../../fetch/user/orderList'
 import './style.less'
 
 export default class OrderList extends React.Component {
@@ -36,13 +36,29 @@ export default class OrderList extends React.Component {
         })
     }
 
+    // 点击提交评论
+    submitComment(id, comment, star, callback) {
+        const result = postComment(id, comment, star, callback);
+        result.then(res => {
+            return res.json()
+        }).then(json => {
+            // console.log(123);
+            if (json.error === 0) {
+                // 已经评价，修改状态
+                callback()
+            }
+        })
+    }
+
+
     render() {
         return (
             <div className="order-list-container">
                 <h2>您的订单</h2>
                 {
                     this.state.orderListData.length
-                        ? <OrderListComponent orderListData={this.state.orderListData}/>
+                        ? <OrderListComponent orderListData={this.state.orderListData}
+                                              submitComment={this.submitComment.bind(this)}/>
                         : <div>加载中</div>
                 }
             </div>

@@ -17,7 +17,7 @@ export default class OrderListComponent extends React.Component {
         return (
             <div>
                 {orderListData.map((item, index) => (
-                    <OrderListItem key={`OrderListItem${index}`} orderListData={item}/>
+                    <OrderListItem key={`OrderListItem${index}`} orderListData={item} submitComment={this.props.submitComment}/>
                 ))}
             </div>
         )

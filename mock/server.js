@@ -2,17 +2,8 @@ var app = new (require('koa'))();
 var router = require('koa-router')();
 var cors = require('koa-cors');
 
-/*router.get('/', function* (next) {
-    this.body = 'hello koa !'
-});
-
-
-router.get('/api', function* (next) {
-    this.body = 'test data'
-});*/
-
 // 首页 —— 广告（超值特惠）
-var homeAdData = require('./home/ad.js')
+var homeAdData = require('./home/ad.js');
 router.get('/api/homead', function* (next) {
     console.log('首页 —— 广告（超值特惠）')
 
@@ -117,7 +108,7 @@ router.post('/api/submitComment', function* (next) {
     // 获取参数
 
     this.body = {
-        errno: 0,
+        error: 0,
         msg: 'ok'
     }
 })

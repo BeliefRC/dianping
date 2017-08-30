@@ -30,7 +30,7 @@ npm start	//启动项目
     	node_modules/
     	public/
     	script/
-   	 src/
+    	src/
     		actions/
     		components/		木偶组件
     		config/		localStorage中使用的常量
@@ -43,7 +43,7 @@ npm start	//启动项目
     		store/		单一状态树
     		until/		 localStorage的公共处理
     		index.js
-			registerServiceWorker.js
+		registerServiceWorker.js
    	 package.json
     	README.md
  ```
@@ -78,7 +78,7 @@ npm start	//启动项目
 
 **提示：因模拟的数据有限，下拉加载显示的内容是一样的，但是每次请求发送携带的参数是不同的**
 
-###### 6.截图展示
+###### 7.截图展示
 
 [![首页](http://wx3.sinaimg.cn/mw690/85eda507gy1fj0zlht0iij20d60n9my5.jpg "首页")](http://wx3.sinaimg.cn/mw690/85eda507gy1fj0zlht0iij20d60n9my5.jpg "首页")
 

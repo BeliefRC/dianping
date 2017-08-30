@@ -16,7 +16,8 @@ import OrderList from './subpage/OrderList'
         this.state = {};
     }
 
-    componentDidMount() { // 如果未登录，跳转到登录页面
+    componentDidMount() {
+        // 如果未登录，跳转到登录页面
         if (!sessionStorage.username) {
             hashHistory.push('/Login')
         }

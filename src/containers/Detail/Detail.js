@@ -15,6 +15,7 @@ export default  class Detail  extends React.Component {
         this.state = {};
     }
     render() {
+        // 商户id
         let id=this.props.params.id;
         return (
             <div>

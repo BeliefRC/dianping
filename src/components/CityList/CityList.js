@@ -11,7 +11,7 @@ export default class CityList extends React.Component {
         // 初始状态
         this.state = {};
     }
-
+    // 点击切换城市
     clickHandle(cityName) {
         this.props.changeCityFun(cityName)
     }

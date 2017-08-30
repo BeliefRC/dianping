@@ -30,6 +30,7 @@ class Buy extends React.Component {
         return true
     }
 
+    // 是否收藏校验
     isStoreCheck() {
         const id = this.props.id,
             store = this.props.store;//[]
@@ -45,6 +46,7 @@ class Buy extends React.Component {
         })
     }
 
+    // 处理收藏按钮
     storeHandle() {
         const loginCheck = this.loginCheck();
         //没登录终止操作
@@ -69,6 +71,7 @@ class Buy extends React.Component {
         })
     }
 
+    // 处理购买按钮
     buyHandle() {
         const loginCheck = this.loginCheck();
         //没登录终止操作

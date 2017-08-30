@@ -20,7 +20,7 @@ export default class OrderList extends React.Component {
         const username = this.props.username;
         this.loadOrderListData(username);
     }
-
+    //加载订单列表数据
     loadOrderListData(username) {
         getOrderListData(username)
             .then(res => {

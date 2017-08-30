@@ -17,6 +17,7 @@ export default class BusinessInfo extends React.Component {
 
     componentDidMount() {
         let id = this.props.id;
+        // 获取商户信息
         getInfoData(id)
             .then(res => {
                 return res.json()

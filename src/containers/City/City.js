@@ -25,7 +25,7 @@ class City extends React.Component {
         this.props.userInfoActions.update({
             cityName
         });
-        LocalStore.setItem(CITYNAME, cityName)
+        LocalStore.setItem(CITYNAME, cityName);
         hashHistory.push('/')
 
     }

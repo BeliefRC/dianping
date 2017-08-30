@@ -11,11 +11,11 @@ export default class BuyAndStore extends React.Component {
         // 初始状态
         this.state = {};
     }
-
+    // 购买按钮
     buyClick() {
         this.props.buyHandle();
     }
-
+    // 收藏按钮
     storeClick() {
         this.props.storeHandle();
     }

@@ -49,7 +49,7 @@ class Login extends React.Component {
             router = this.props.params.router;
         let userInfo = this.props.userInfo;
         // 储存用户名
-        this.props.userInfo.username = username || sessionStorage.username;
+        this.props.userInfo.username = username;
         sessionStorage.username = username;
         //更新用户名
         actions.update(userInfo);

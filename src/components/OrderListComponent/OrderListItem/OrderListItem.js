@@ -44,7 +44,7 @@ export default class OrderListItem extends React.Component {
         }
         let submitComment = this.props.submitComment,
             id = this.props.orderListData.id,
-            comment = this.state.commentText,
+            comment = this.state.commentText.trim(),
             star = this.state.stars[id] || '0';
         submitComment(id, comment, star, this.commentOk.bind(this))
 
@@ -57,6 +57,7 @@ export default class OrderListItem extends React.Component {
         })
     }
 
+    // 评论完成
     commentOk() {
         this.setState({
             commentState: 2
@@ -74,6 +75,7 @@ export default class OrderListItem extends React.Component {
         })
     }
 
+    // 设置评论状态
     componentDidMount() {
         this.setState({
             commentState: this.props.orderListData.commentState

@@ -12,7 +12,7 @@ export default class UserInfo extends React.Component {
         // 初始状态
         this.state = {};
     }
-
+    // 退出登录
     clickLogout() {
         sessionStorage.username = "";
         hashHistory.push('/')

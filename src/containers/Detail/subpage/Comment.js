@@ -26,7 +26,7 @@ export default class Comment extends React.Component {
         const commentListData = getCommentData(0, id);
         this.handlerResult(commentListData);
     }
-
+    // 处理请求返回的数据
     handlerResult(result) {
         result.then(res => res.json())
             .then(json => {

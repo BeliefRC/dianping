@@ -13,15 +13,16 @@ export default class Star extends React.Component {
             star: 0
         };
     }
-
+    // 初始化设置星星数量
     componentDidMount() {
         this.setState({
             star: this.props.star
         })
     }
-
+    // 点击设置星星数量
     clickHandle(star) {
         const clickCallback = this.props.clickCallback;
+        // 若不存在click回调则不进行处理
         if (!clickCallback) {
             return
         }

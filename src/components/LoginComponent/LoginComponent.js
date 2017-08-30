@@ -16,7 +16,7 @@ export default class LoginComponent extends React.Component {
             sending: false,
         };
     }
-
+    // 发送验证码
     sendCode() {
         let time = 60;
         timing = setInterval(() => {
@@ -36,24 +36,24 @@ export default class LoginComponent extends React.Component {
         }, 1e3);
 
     }
-
+    // 用户名值同步
     changeHandle(e) {
         this.setState({
             username: e.target.value
         })
     }
-
+    // 验证码值同步
     codeChange(e) {
         this.setState({
             code: e.target.value
         })
     }
-
+    // 点击登录按钮
     clickHandle() {
         let userName = this.state.username;
         this.props.loginHandle(userName)
     }
-
+    // 组件卸载时清理计时器，恢复state
     componentWillUnmount() {
         clearInterval(timing);
         this.setState({

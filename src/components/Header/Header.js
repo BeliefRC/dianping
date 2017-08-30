@@ -12,7 +12,7 @@ export default class Header extends React.Component {
         // 初始状态
         this.state = {};
     }
-
+    // 返回按钮
     clickHandle() {
         hashHistory.push('/')
     }

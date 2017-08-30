@@ -31,11 +31,11 @@ export default class SearchInput extends React.Component {
     // 敲回车时执行跳转，传递参数
     keyUpHandle(e) {
         // 未输入内容则不执行
-        if (e.target.value === '') {
+        if (e.target.value.trim() === '') {
             return
         }
         if (e.keyCode === 13) {
-            this.props.enterHandle(this.state.value);
+            this.props.enterHandle(this.state.value.trim());
         }
     }
 
